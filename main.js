@@ -1,6 +1,26 @@
-const { empty, withArgs } = require('./eventbox.js')
-const duplicate = require('./streambox')
-// empty()
-// withArgs(['Luffy', 'Zoro', 'Usopp','Robin', 'Nami', 'Sanji', 'Ch0pper', ])
+const { empty, withArgs } = require('./eventbox')
+const { duplicate, transform, csvtojson } = require('./streambox')
 
-duplicate('Chopin.txt')
+// console.log('----- Eventbox')
+// eventbox
+// empty()
+// withArgs([
+//   'Luffy',
+//   'Zoro',
+//   'Usopp',
+//   'Robin',
+//   'Nami',
+//   'Sanji',
+//   'Ch0pper',
+// ])
+
+// console.log('----- Streambox')
+// streambox
+// duplicate('main.js')
+
+// transform(  'eventbox.js', // filename 
+//             /[a-z]/g,      // re ( RegExp -> Regular expression )
+//             (letter) => letter.toUpperCase(), // fn -> function
+// )
+
+csvtojson('./ressources/Comp0ser.csv')
