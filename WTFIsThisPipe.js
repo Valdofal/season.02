@@ -28,7 +28,7 @@ function fnInFile (filename){
     rl.on('line', (line) => {
         if (line.startsWith('function')){
             line = line.replace('function', '').replace('{','')
-            console.log(line)
+            console.log(`I will finish: ${line}`)
         }
     })
 }
